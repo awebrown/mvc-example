@@ -13,6 +13,11 @@ angular.module('dating-site', [
         url: '/login',
         templateUrl: 'components/login/loginView.html',
         controller: 'LoginCtrl'
+      })
+      .state('sign-up', {
+        url: '/sign-up',
+        templateUrl: 'components/signUp/signUpView.html',
+        controller: 'SignUpCtrl'
       });
 
     $urlRouterProvider.otherwise('/login');
