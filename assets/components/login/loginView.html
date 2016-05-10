@@ -1,5 +1,26 @@
-<input type="text" placeholder="username" ng-model="username">
-<input type="password" placeholder="password" ng-model="password">
-
-<button ng-click="login(username, password)" class="btn btn-default">Login</button>
-<button class="btn btn-default" ui-sref="sign-up">Sign Up</button>
+<section class="container login">
+	<form>
+		<fieldset class="form-group">
+			<div class="row">
+				<div class="col-md-3 col-md-offset-4">
+					<input class="form-control" type="email" placeholder="example@email.com" ng-model="username" required>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset class="form-group">
+			<div class="row">
+				<div class="col-md-3 col-md-offset-4">	
+					<input class="form-control" type="password" placeholder="password" ng-model="password" required>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset class="form-group">
+			<div class="row">
+				<div class="col-md-3 col-md-offset-4">
+					<button class="btn btn-primary" ng-click="login(username, password)">Login</button>
+					<button class="btn btn-primary pull-right" ui-sref="sign-up">Sign Up</button>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+</section>
