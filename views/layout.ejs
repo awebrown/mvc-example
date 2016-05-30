@@ -13,6 +13,18 @@
   <link rel="stylesheet" href="app.css">
 </head>
 <body>
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Dating Site</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><i class="glyphicon glyphicon-home"></i> Login/Logout</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
 <%-body%>
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -21,11 +33,14 @@
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
 <script src="app.js"></script>
 <script src="service_base.js"></script>
 <script src="controller_base.js"></script>
 <script src="components/login/loginController.js"></script>
 <script src="components/signUp/signUpController.js"></script>
 <script src="services/login.js"></script>
+<script src="components/profile/profileController.js"></script>
+<script src="services/profile.js"></script>
 </body>
 </html>
