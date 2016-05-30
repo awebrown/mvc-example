@@ -18,6 +18,26 @@ angular.module('dating-site', [
         url: '/sign-up',
         templateUrl: 'components/signUp/signUpView.html',
         controller: 'SignUpCtrl'
+      })
+      .state('profile', {
+        url: '/profile',
+        templateUrl: 'components/profile/profileView.html',
+        controller: 'ProfileCtrl'
+      })
+      .state('editProfile', {
+        url: '/edit-profile',
+        templateUrl: 'components/profile/editProfileView.html',
+        controller: 'ProfileCtrl'
+      })
+      .state('matches', {
+        url: '/matches',
+        templateUrl: 'components/matches/matchesView.html',
+        controller: 'ProfileCtrl'
+      })
+      .state('messages', {
+        url: '/messages',
+        templateUrl: 'components/messages/messagesView.html',
+        controller: 'ProfileCtrl'
       });
 
     $urlRouterProvider.otherwise('/login');
