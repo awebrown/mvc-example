@@ -1,0 +1,33 @@
+<section class="container profile" ng-controller="ProfileCtrl">
+	<div class="row">
+		<div class="col-md-8">
+			<!-- profile image will go here -->
+			<span style="border: dotted black 4px; padding: 60px 10px 0 10px;" class="imagePlaceholder text-center">Drag and drop an image, or click to upload. <br> No Brian, this does not work yet.</span>
+		</div>
+	</div>
+	<hr />
+	<div class="container">
+			<form name="editProfile">
+		<fieldset class="form-group">
+			<label style="display:block;">Enter Your First Name:
+				<input style="display:block;" type="text" class="form-control" ng-model="firstName" name="" required />
+			</label>
+			<label style="display:block;">Enter Your Last Name:
+				<input style="display:block;" type="text" class="form-control" ng-model="lastName" name="" required />
+			</label>
+			<label style="display:block;">Enter Your Date of Birth:
+				<input style="display:block;" type="text" class="form-control" ng-model="DOB" name="" placeholder="month/day/year" required />
+			</label>
+			<label style="display:block;">Say something about yourself:
+				<textarea style="display:block;" style="display:block;" class="form-control" type="text" ng-model="about" name="" required></textarea>
+			</label>
+		</fieldset>
+	</form>
+		<button class="btn btn-primary" ng-click="saveProfile()">Save</button>
+		<button class="btn btn-primary" ng-click="profileView()">Back to Your Profile</button>
+
+	</div>
+
+</section>
+
+

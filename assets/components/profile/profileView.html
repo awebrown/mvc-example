@@ -1,0 +1,29 @@
+<section class="container profile" ng-controller="ProfileCtrl">
+
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Welcome {{ firstName }}!</h2>
+			<profile-nav></profile-nav>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8">
+			<!-- profile image will go here -->
+			<span class="imagePlaceholder"></span>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8">
+			<h3>{{ firstName + ' ' + lastName }} </h3>
+			<h4>{{ DOB | date : MMMM.dd.y}}</h4>
+			<p>{{ about }}</p>
+		</div>
+	</div>
+
+	<hr />
+	
+	<button class="btn btn-primary" ng-click="editProfileView()">Edit Profile</button>
+
+</section>
