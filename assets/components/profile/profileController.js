@@ -1,33 +1,24 @@
 angular.module('dating-site.controllers')
 
-  .controller('ProfileCtrl', ['$scope', '$log', '$state', 'profileService', function($scope, $log, $state, profileService) {
+  .controller('ProfileCtrl', ['$scope', '$log', '$state', 'User', function($scope, $log, $state, User) {
 
-    $scope.firstName = profileService.firstName;
-    $scope.$watch('firstName', function() {
-      profileService.firstName = $scope.firstName;
-    });
+    $scope.user = {};
 
-    $scope.lastName = profileService.lastName;
-    $scope.$watch('lastName', function() {
-      profileService.lastName = $scope.lastName;
-    });
-
-    $scope.DOB = profileService.DOB;
-    $scope.$watch('DOB', function() {
-      profileService.DOB = $scope.DOB;
-    });
-
-    $scope.about = profileService.about;
-    $scope.$watch('about', function() {
-      profileService.about = $scope.about;
-    });
+    User.getCurrentUser()
+      .then(function(user) {
+        $scope.user = user.data;
+      });
 
     $scope.editProfileView = function() {
       $state.go('editProfile');
     };
 
     $scope.saveProfile = function() {
-      $state.go('profile');
+      User.updateUser($scope.user)
+        .then(function(user) {
+          console.log(user);
+          $state.go('profile');
+        });
     };
 
     $scope.profileView = function() {

@@ -2,7 +2,7 @@
 
 	<div class="row">
 		<div class="col-md-12">
-			<h2>Welcome {{ firstName }}!</h2>
+			<h2>Welcome {{ user.firstName }}!</h2>
 			<profile-nav></profile-nav>
 		</div>
 	</div>
@@ -16,14 +16,14 @@
 
 	<div class="row">
 		<div class="col-md-8">
-			<h3>{{ firstName + ' ' + lastName }} </h3>
-			<h4>{{ DOB | date : MMMM.dd.y}}</h4>
-			<p>{{ about }}</p>
+			<h3>{{ user.firstName + ' ' + user.lastName }} </h3>
+			<h4>{{ user.DOB | date : MMMM.dd.y}}</h4>
+			<p>{{ user.about }}</p>
 		</div>
 	</div>
 
 	<hr />
-	
+
 	<button class="btn btn-primary" ng-click="editProfileView()">Edit Profile</button>
 
 </section>

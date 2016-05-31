@@ -8,7 +8,7 @@ angular.module('dating-site.services')
         },
 
         logout: function() {
-          return $http.get('/auth/logout');
+          return $http.post('/auth/logout');
         },
 
         register: function(email, password) {

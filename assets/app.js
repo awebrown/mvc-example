@@ -6,7 +6,11 @@ angular.module('dating-site', [
     'dating-site.controllers',
     'dating-site.services'
   ])
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+
+    if (localStorage.getItem("access_token")) {
+      $httpProvider.defaults.headers.common.access_token = localStorage.getItem("access_token");
+    }
 
     $stateProvider
       .state('login', {
