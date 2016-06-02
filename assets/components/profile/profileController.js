@@ -39,9 +39,14 @@ angular.module('dating-site.controllers')
         restrict: 'E',
         templateUrl: 'directives/profilenav.html'
       }
+    })
+
+  .directive("fileUpload", function(){
+      return {
+        restrict: 'E',
+        templateUrl: 'directives/fileUpload.html'
+      }
     });
-
-
 
 
 
