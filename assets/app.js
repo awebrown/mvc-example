@@ -3,6 +3,8 @@
 // Declare app level module which depends on views, and components
 angular.module('dating-site', [
     'ui.router',
+    'ngFileUpload',
+    'ngMaterial',
     'dating-site.controllers',
     'dating-site.services'
   ])
@@ -30,7 +32,7 @@ angular.module('dating-site', [
       })
       .state('editProfile', {
         url: '/edit-profile',
-        templateUrl: 'components/profile/editProfileView.html',
+        templateUrl: 'components/edit_profile/editProfileView.html',
         controller: 'ProfileCtrl'
       })
       .state('matches', {
