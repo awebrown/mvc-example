@@ -1,3 +1,4 @@
+<!--
 <ul class="nav nav-tabs">
 	<li class="pull-right" role="presentation" ui-sref-active="active">
 		<a href ui-sref="matches" ng-click="matchesView()">My Matches</a>
@@ -9,3 +10,27 @@
 		<a href ui-sref="profile" ng-click="profileView()">My Profile</a>
 	</li>
 </ul>
+-->
+<md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+		<md-tab label="My Profile">
+			<md-content class="md-padding">
+				<profile-view></profile-view>
+			</md-content>
+    	</md-tab>
+		<md-tab label="My Matches">
+			<md-content class="md-padding">
+				<matches-view></matches-view>
+			</md-content>
+    	</md-tab>
+    	<md-tab label="My Messages">
+			<md-content class="md-padding">
+			<messages-view></messages-view>
+			</md-content>
+    	</md-tab>
+    </md-tabs>
+</md-content>
+
+
+
+

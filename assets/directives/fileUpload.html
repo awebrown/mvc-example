@@ -6,7 +6,7 @@
           <legend>Upload Profile Pic</legend>
           <i ng-show="fileUpload.file.$error.required">*required</i><br>
           <i ng-show="fileUpload.file.$error.maxSize">File too large {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
-          <div class="drop-box" ngf-drop ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" ngf-model-invalid="errorFile" required>Drop images here or click to upload</div>
+          <div class="drop-box" ngf-drop ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" ngf-model-invalid="errorFile" required><img ngf-src="{{ picFile }}">Drop images here or click to upload</div>
           <img ng-show="fileUpload.file.$valid" ngf-thumbnail="picFile" class="thumb"> 
           <button class="md-raised md-warn md-button md-ink-ripple" ng-click="picFile = null" ng-show="picFile">Remove</button>
           <br>

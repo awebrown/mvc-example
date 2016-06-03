@@ -25,6 +25,11 @@ angular.module('dating-site', [
         templateUrl: 'components/signUp/signUpView.html',
         controller: 'SignUpCtrl'
       })
+      .state('home', {
+        url: '/home',
+        templateUrl: 'components/home_screen/homeScreenView.html',
+        controller: 'ProfileCtrl'
+      })
       .state('profile', {
         url: '/profile',
         templateUrl: 'components/profile/profileView.html',

@@ -1,4 +1,4 @@
-<section class="container profile" ng-controller="ProfileCtrl">
+<section class="container profile" ng-controller="ProfileCtrl" ng-cloak>
 	<div class="row">
 		<div class="col-md-8">
 			<file-upload></file-upload>
@@ -21,7 +21,7 @@
 					<textarea style="display:block;" style="display:block;" class="form-control" type="text" ng-model="user.about" name="" required></textarea>
 				</label>
 				<button class="md-raised md-primary md-button md-ink-ripple" ng-click="saveProfile()">Save</button>
-				<button class="md-raised md-primary md-button md-ink-ripple" ng-click="profileView()">Back to Your Profile</button>
+				<button class="md-raised md-primary md-button md-ink-ripple" ng-click="homeView()">Back to Your Profile</button>
 			</fieldset>
 		</form>
 	</div>

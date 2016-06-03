@@ -17,12 +17,12 @@ angular.module('dating-site.controllers')
       User.updateUser($scope.user)
         .then(function(user) {
           console.log(user);
-          $state.go('profile');
+          $state.go('home');
         });
     };
 
-    $scope.profileView = function() {
-      $state.go('profile');
+    $scope.homeView = function() {
+      $state.go('home');
     };
 
     $scope.matchesView = function() {
@@ -33,11 +33,17 @@ angular.module('dating-site.controllers')
       $state.go('messages');
     };
 }])
+  .directive("homeScreen", function(){
+      return {
+        restrict: 'E',
+        templateUrl: 'directives/homeScreen.html'
+      }
+    })
 
   .directive("profileNav", function(){
       return {
         restrict: 'E',
-        templateUrl: 'directives/profilenav.html'
+        templateUrl: 'directives/profileNav.html'
       }
     })
 
@@ -45,6 +51,25 @@ angular.module('dating-site.controllers')
       return {
         restrict: 'E',
         templateUrl: 'directives/fileUpload.html'
+      }
+    })
+
+  .directive("profileView", function(){
+      return {
+        restrict: 'E',
+        templateUrl: 'directives/profile.html'
+      }
+    })
+  .directive("messagesView", function(){
+      return {
+        restrict: 'E',
+        templateUrl: 'directives/messages.html'
+      }
+    })
+  .directive("matchesView", function(){
+      return {
+        restrict: 'E',
+        templateUrl: 'directives/matches.html'
       }
     });
 
