@@ -5,7 +5,7 @@ angular.module('dating-site.controllers')
     $scope.login = function(username, password) {
       Login.login(username, password)
         .then(function(success) {
-          $state.go('home');
+          $state.go('home.profile');
         }, function(error) {
           $window.alert(error.data.error);
         });

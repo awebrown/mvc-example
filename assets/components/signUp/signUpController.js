@@ -5,7 +5,7 @@ angular.module('dating-site.controllers')
     $scope.register = function(username, password) {
       Login.register(username, password)
         .then(function(success) {
-          $state.go('editProfile');
+          $state.go('home.editProfile');
         }, function(error) {
           $window.alert(error.data);
         });

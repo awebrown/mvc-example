@@ -1,8 +1,28 @@
-<section class="container profile" ng-controller="ProfileCtrl" ng-cloak>
-	<div class="row">
-		<div class="col-md-12">
-			<h2>Welcome {{ user.firstName }}!</h2>
-		</div>
-	</div>
-	<profile-nav></profile-nav>
-</section>
+<div layout="row">
+  <side-nav></side-nav>
+  <div layout="column" flex>
+    <toolbar></toolbar>
+    <md-content flex id="content">
+      <div ui-view></div>
+    </md-content>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

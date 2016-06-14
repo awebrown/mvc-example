@@ -1,30 +1,23 @@
-<section style="margin-top:100px;" class="container">
-	<div class="row">
-		<div class="col-md-4 col-md-offset-3">
-			<md-content class="md-padding" layout-xs="column" layout="row">
-			    <div flex-xs flex-gt-xs="50" layout="column">
-				    <md-card>
-				        <md-card-title>
-				        	<md-card-title-text>
-				            	<div style="margin:15px 0 15px 35px;" class="md-headline">Please Sign Up</div>
-				          	</md-card-title-text>
-				        </md-card-title>
-					    <md-card-content>
-					        <md-input-container class="md-block">
-					    		<md-icon md-font-icon="email">email</md-icon>
-					    		<input ng-model="username" type="email" placeholder="Email (required)" ng-required="true">
-							</md-input-container>
-							<md-input-container class="md-block">
-								<md-icon md-font-icon="lock">lock</md-icon>
-								<input type="password" placeholder="Password" ng-model="password" ng-required="true">
-							</md-input-container>
-						</md-card-content>
-					</md-card>
-				</div>
-			</md-content>
-			<div class="text-center">
-				<button class="md-raised md-primary md-button md-ink-ripple" ng-click="register(username, password)">Sign Up</button>
-			</div>
-		</div>
-	</div>
-</section>
+<md-content layout="row" layout-align="center center">
+    <md-card>
+        <md-card-title>
+        	<md-card-title-text>
+            	<div style="margin:15px 0 15px 35px;" class="md-headline">Please Sign Up</div>
+          	</md-card-title-text>
+        </md-card-title>
+	    <md-card-content>
+	        <md-input-container class="md-block">
+	    		<md-icon md-font-icon="email">email</md-icon>
+	    		<input ng-model="username" type="email" placeholder="Email (required)" ng-required="true">
+			</md-input-container>
+			<md-input-container class="md-block">
+				<md-icon md-font-icon="lock">lock</md-icon>
+				<input type="password" placeholder="Password" ng-model="password" ng-required="true">
+			</md-input-container>
+		</md-card-content>
+	</md-card>
+</md-content>
+<div class="text-center">
+	<button class="md-raised md-primary md-button md-ink-ripple" ng-click="register(username, password)">Sign Up</button>
+</div>
+

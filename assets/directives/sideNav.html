@@ -1,0 +1,45 @@
+<div class="fill-height" layout="vertical">
+  <md-sidenav id="sideNav" class="md-sidenav-left md-whiteframe-z2" 
+          md-component-id="left" 
+          md-is-locked-open="$mdMedia('gt-sm')">
+    <md-toolbar>
+      <h1>Welcome {{ user.firstName }}!</h1>
+    </md-toolbar>
+    <md-content>
+      <md-list>
+        <md-list-item style="padding-top:10px;">
+          <a ui-sref=".profile"><img ng-src="{{ user.defaultImage }}" style="border-radius: 50%;" height="50" width="50">My Profile</a>
+        </md-list-item>
+        <hr>
+        <md-list-item>
+          <md-button class="navBtn" ui-sref="login">
+            <i class="glyphicon glyphicon-home"></i> Login/Logout</a>
+          </md-button>
+        </md-list-item>
+        <hr>
+        <md-list-item>
+          <md-button class="navBtn" ng-click="close()" ui-sref=".messages">Messages</md-button>
+        </md-list-item>
+        <hr>
+        <md-list-item>
+          <md-button class="navBtn" ng-click="close()" ui-sref=".matches">Matches</md-button>
+        </md-list-item>
+        <hr>
+        <md-list-item> 
+          <md-button class="navBtn" ng-click="close()" ui-sref=".profile">Profile</md-button>
+        </md-list-item>
+        <hr>
+        <md-list-item>
+          <md-button class="navBtn" ng-click="close()" ui-sref=".editProfile">Edit</md-button>
+        </md-list-item>
+        <hr>
+        <md-list-item>
+          <md-button class="navBtn" ng-click="close()" ui-sref=".photos">Photos</md-button>
+        </md-list-item>
+        <hr>
+      </md-list>
+    </md-content>
+  </md-sidenav>
+</div>
+
+

@@ -27,28 +27,33 @@ angular.module('dating-site', [
       })
       .state('home', {
         url: '/home',
-        templateUrl: 'components/home_screen/homeScreenView.html',
-        controller: 'ProfileCtrl'
+        templateUrl: 'components/main_view/mainView.html',
+        controller: 'MainCtrl'
       })
-      .state('profile', {
-        url: '/profile',
-        templateUrl: 'components/profile/profileView.html',
-        controller: 'ProfileCtrl'
-      })
-      .state('editProfile', {
-        url: '/edit-profile',
-        templateUrl: 'components/edit_profile/editProfileView.html',
-        controller: 'ProfileCtrl'
-      })
-      .state('matches', {
+      .state('home.matches', {
         url: '/matches',
         templateUrl: 'components/matches/matchesView.html',
-        controller: 'ProfileCtrl'
+        controller: 'MainCtrl'
       })
-      .state('messages', {
+      .state('home.photos', {
+        url: '/photos',
+        templateUrl: 'directives/photos.html',
+        controller: 'MainCtrl'
+      })
+      .state('home.profile', {
+        url: '/profile',
+        templateUrl: 'directives/profile.html',
+        controller: 'MainCtrl'
+      })
+      .state('home.editProfile', {
+        url: '/edit-profile',
+        templateUrl: 'components/edit_profile/editProfileView.html',
+        controller: 'fileUploadCtrl'
+      })
+      .state('home.messages', {
         url: '/messages',
         templateUrl: 'components/messages/messagesView.html',
-        controller: 'ProfileCtrl'
+        controller: 'MainCtrl'
       });
 
     $urlRouterProvider.otherwise('/login');

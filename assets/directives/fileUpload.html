@@ -1,34 +1,23 @@
-<section class="container" ng-controller="FileUploadCtrl">
-  <div class="row">
-    <div class="col-md-12">
-      <form name="fileUpload">
-        <fieldset>
-          <legend>Upload Profile Pic</legend>
-          <i ng-show="fileUpload.file.$error.required">*required</i><br>
-          <i ng-show="fileUpload.file.$error.maxSize">File too large {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
-          <div class="drop-box" ngf-drop ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" ngf-model-invalid="errorFile" required><img ngf-src="{{ picFile }}">Drop images here or click to upload</div>
-          <img ng-show="fileUpload.file.$valid" ngf-thumbnail="picFile" class="thumb"> 
-          <button class="md-raised md-warn md-button md-ink-ripple" ng-click="picFile = null" ng-show="picFile">Remove</button>
-          <br>
-          <button class="md-raised md-primary md-button md-ink-ripple" ng-disabled="!fileUpload.$valid" ng-click="uploadPic(picFile)">Submit</button>
-          <br>
-          <br>
-          <md-progress-linear md-mode="determinate" value="{{picFile.progress}}" ng-show="picFile.progress >= 0"></md-progress-linear>
-          <br>
-          <md-button class="md-raised" ng-show="picFile.result">Upload Successful</md-button>
-          <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
-        </fieldset>
-        <br>
-      </form>
-    </div>
-  </div>
-  <md-card>
- <md-card-content>
-   <h2>Card headline</h2>
-   <p>Card content</p>
- </md-card-content>
- <md-card-footer>
-   Card footer
- </md-card-footer>
-</md-card>
+<section ng-controller="FileUploadCtrl" ng-cloak>
+  <form name="fileUpload">
+    <fieldset>
+      <legend>Upload Profile Pic</legend>
+      <i ng-show="fileUpload.file.$error.required">*required</i><br>
+      <i ng-show="fileUpload.file.$error.maxSize">File too large {{errorFile.size / 1000000|number:1}}MB: max 2M</i>
+      <div class="drop-box" ngf-drop ngf-select ng-model="picFile" name="file" accept="image/*" ngf-max-size="2MB" ngf-model-invalid="errorFile" required>
+        <img ngf-src="{{ picFile }}">Drop images here or click to upload
+      </div>
+      <img ng-show="fileUpload.file.$valid" ngf-thumbnail="picFile" class="thumb"> 
+      <button class="md-raised md-warn md-button md-ink-ripple" ng-click="picFile = null" ng-show="picFile">Remove</button>
+      <br>
+      <button class="md-raised md-primary md-button md-ink-ripple" ng-disabled="!fileUpload.$valid" ng-click="uploadPic(picFile)">Submit</button>
+      <br>
+      <br>
+      <md-progress-linear md-mode="determinate" value="{{picFile.progress}}" ng-show="picFile.progress >= 0"></md-progress-linear>
+      <br>
+      <md-button class="md-raised" ng-show="picFile.result">Upload Successful</md-button>
+      <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+    </fieldset>
+    <br>
+  </form>
 </section>

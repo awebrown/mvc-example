@@ -1,0 +1,16 @@
+<md-tabs md-dynamic-height md-stretch-tabs="always">
+	<md-tab label="Upload a Photo">
+		<md-content class="md-padding">
+			<file-upload></file-upload>
+		</md-content>
+	</md-tab>
+	<md-tab label="Gallery">
+			<md-content class="md-padding">
+				<ul ng-repeat="image in user.images">
+					<li style="display:inline;">
+						<img style="float:left;" ng-src="{{ image }}">
+					</li>
+				</ul>
+			</md-content>
+	</md-tab>
+<md-tabs>
