@@ -8,11 +8,15 @@ angular.module('dating-site', [
     'dating-site.controllers',
     'dating-site.services'
   ])
-  .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+  .config(function($stateProvider, $urlRouterProvider, $httpProvider, $mdThemingProvider) {
 
     if (localStorage.getItem("access_token")) {
       $httpProvider.defaults.headers.common.access_token = localStorage.getItem("access_token");
     }
+
+    $mdThemingProvider.theme('default')
+            .primaryPalette('blue')
+            .accentPalette('red');
 
     $stateProvider
       .state('login', {

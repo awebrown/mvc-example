@@ -1,11 +1,26 @@
 <md-toolbar>
     <div class="md-toolbar-tools">
-        <md-button hide-gt-sm ng-click="" class="md-icon-button">
-          <md-icon md-svg-icon=""></md-icon>
-        </md-button>
-        <h1>Dating Site</h1>
-		<md-button class="md-icon-button" ng-click="toggleLeft()" hide-gt-sm>
+        <md-button class="md-icon-button" ng-click="toggleLeft()" hide-gt-sm>
 			<i class="material-icons md-36">menu</i>
 		</md-button>
+        <h1>Dating Site</h1>
+		<md-fab-speed-dial ng-cloak md-direction="down" class="md-fling md-fab-top-right">
+      		<md-fab-trigger>
+		        <md-button class="md-fab">
+		          <i class="material-icons md-24">add</i> 
+		          <md-tooltip md-direction="left">Do something</md-tooltip>
+		        </md-button>
+      		</md-fab-trigger>
+      		<md-fab-actions>
+        		<md-button class="md-fab md-raised md-mini" ng-click="">
+	          		<ng-md-icon icon=""></ng-md-icon>
+	          		<md-tooltip md-direction="left">Do more things</md-tooltip>
+        		</md-button>
+        		<md-button class="md-fab md-raised md-mini" ng-click="">
+		          	<ng-md-icon icon="clear_all"></ng-md-icon>
+		          	<md-tooltip md-direction="left">Do some more shit</md-tooltip>
+		        </md-button>
+  			</md-fab-actions>
+    	</md-fab-speed-dial> 
     </div>
 </md-toolbar>
