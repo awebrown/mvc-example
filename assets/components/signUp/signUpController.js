@@ -7,7 +7,7 @@ angular.module('dating-site.controllers')
         .then(function(success) {
           $state.go('editProfile');
         }, function(error) {
-          $window.alert(error.data.error);
+          $window.alert(error.data);
         });
     };
   });

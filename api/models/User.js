@@ -11,8 +11,10 @@ module.exports = {
   attributes: require('waterlock').models.user.attributes({
     firstName: 'string',
     lastName: 'string',
-    dateOfBirth: 'date',
-    about: 'string'
+    dateOfBirth: 'datetime',
+    about: 'string',
+    images: 'array',
+    defaultImage: 'string'
   }),
 
   beforeCreate: require('waterlock').models.user.beforeCreate,

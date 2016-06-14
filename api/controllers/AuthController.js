@@ -44,7 +44,7 @@ module.exports = require('waterlock').waterlocked({
             waterlock.methods[params.type].actions.login(req, res);
           }else{
             return res.badRequest('unknown/invalid authentication type');
-          }
+           }
         });
     });
   }

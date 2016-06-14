@@ -21,6 +21,11 @@ module.exports = {
   //   connection: 'someMongodbServer'
   // }
 
+  keys: {
+    awsSecretKey: 'mwaL+YEk0y+JdyA2IdVU4NknJp2iXQyyeetm8goj',
+    awsKey: 'AKIAJ2NBXFE55EHR5JWA'
+  },
+
   port: 9001
 
 };
