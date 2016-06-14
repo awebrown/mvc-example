@@ -84,9 +84,7 @@ md-toolbar {
   padding: 75px 40px 0px 40px;
 }
 
-md-sidenav {
-  min-height: 1000px;
-}
+
 
 md-sidenav md-list {
   padding: 0px 0px 8px 0px;
@@ -135,9 +133,10 @@ md-list .md-button.selected {
 }
 
 md-sidenav {
-  overflow: visible;
-
+  overflow: scroll;
 }
+
+
 
 .md-button.md-icon-button {
   padding: 3px 0px 0px 0px !important;

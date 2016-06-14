@@ -42,7 +42,7 @@ angular.module('dating-site', [
       .state('home.photos', {
         url: '/photos',
         templateUrl: 'directives/photos.html',
-        controller: 'MainCtrl'
+        controller: 'FileUploadCtrl'
       })
       .state('home.profile', {
         url: '/profile',
@@ -52,7 +52,7 @@ angular.module('dating-site', [
       .state('home.editProfile', {
         url: '/edit-profile',
         templateUrl: 'components/edit_profile/editProfileView.html',
-        controller: 'fileUploadCtrl'
+        controller: 'MainCtrl'
       })
       .state('home.messages', {
         url: '/messages',
