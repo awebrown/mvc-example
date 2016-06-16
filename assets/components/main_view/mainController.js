@@ -1,6 +1,7 @@
 angular.module('dating-site.controllers')
 
-  .controller('MainCtrl', ['$scope', '$log', '$state', 'User', '$timeout', '$mdSidenav', function($scope, $log, $state, User, $timeout, $mdSidenav) {
+  .controller('MainCtrl', ['$scope', '$log', '$state', 'User', '$timeout', '$mdSidenav', 'Match',
+    function($scope, $log, $state, User, $timeout, $mdSidenav, Match) {
 
     $scope.toggleLeft = buildDelayedToggler('left');
 
@@ -35,7 +36,7 @@ angular.module('dating-site.controllers')
             $log.debug("toggle " + sideNav + " is done");
           });
       }
-    };
+    }
 
     $scope.close = function () {
       $mdSidenav('left').close()
@@ -43,6 +44,11 @@ angular.module('dating-site.controllers')
           $log.debug("close LEFT is done");
         });
     };
+
+      Match.getMatches()
+        .then(function(data) {
+          console.log(data);
+        });
 
     $scope.user = {};
 
@@ -134,7 +140,7 @@ angular.module('dating-site.controllers')
         notes: " I'll be in your neighborhood doing errands"
       },
       ];
-    
+
 }])
 
   .directive("homeScreen", function(){
@@ -198,4 +204,3 @@ angular.module('dating-site.controllers')
 
 
 
-  

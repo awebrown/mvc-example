@@ -30,6 +30,10 @@ module.exports.policies = {
 
   UserController: {
     '*': ['sessionAuth']
+  },
+
+  MatchController: {
+    '*': ['sessionAuth']
   }
 
   /***************************************************************************
