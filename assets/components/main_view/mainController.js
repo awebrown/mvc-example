@@ -3,6 +3,8 @@ angular.module('dating-site.controllers')
   .controller('MainCtrl', ['$scope', '$log', '$state', 'User', '$timeout', '$mdSidenav', 'Match',
     function($scope, $log, $state, User, $timeout, $mdSidenav, Match) {
 
+
+
     $scope.toggleLeft = buildDelayedToggler('left');
 
     function debounce(func, wait, context) {
@@ -48,7 +50,10 @@ angular.module('dating-site.controllers')
       Match.getMatches()
         .then(function(data) {
           console.log(data);
+          console.log(data.data);
+          $scope.matches = data.data;
         });
+
 
     $scope.user = {};
 
