@@ -20,10 +20,16 @@
   </style>
 </head>
 <body ng-cloak>
+<div class="fullscreen">
 <%-body%>
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
+<footer class="footer">
+  <p>Footer</p>
+  2016
+</footer>
+</div>  
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/angular/angular.js"></script>
@@ -33,6 +39,7 @@
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
 <script src="bower_components/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.0/angular-material-icons.min.js"></script> 
 <script src="app.js"></script>
 <script src="service_base.js"></script>
 <script src="controller_base.js"></script>
@@ -43,5 +50,7 @@
 <script src="components/edit_profile/fileUploadController.js"></script>
 <script src="services/user.js"></script>
 <script src="services/match.js"></script>
+
 </body>
 </html>
+

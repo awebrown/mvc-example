@@ -7,35 +7,51 @@
   <md-content>
     <md-list>
       <md-list-item style="padding-top:10px;">
-        <a ui-sref=".profile"><img ng-src="{{ user.defaultImage }}" style="border-radius: 50%;" height="50" width="50">My Profile</a>
+        <a ui-sref=".profile">
+          <img ng-src="{{ user.defaultImage }}" style="border-radius: 50%;" height="50" width="50">
+            My Profile
+        </a>
       </md-list-item>
       <hr>
       <md-list-item>
         <md-button class="navBtn" ui-sref="login">
-          <i class="glyphicon glyphicon-home"></i> Login/Logout</a>
+          <i class="glyphicon glyphicon-home"></i> 
+          <span class="navIcons">Login/Logout</span>
         </md-button>
       </md-list-item>
-      <hr>
+      
       <md-list-item>
-        <md-button class="navBtn" ng-click="close()" ui-sref=".messages">Messages</md-button>
+        <md-button class="navBtn" ng-click="close()" ui-sref=".messages">
+           <i class="glyphicon glyphicon-envelope"></i>
+            <span class="navIcons">Messages</span>
+        </md-button>
       </md-list-item>
-      <hr>
       <md-list-item>
-        <md-button class="navBtn" ng-click="close()" ui-sref=".matches">Matches</md-button>
+        <md-button class="navBtn" ng-click="close()" ui-sref=".matches">
+        <i class="glyphicon glyphicon-sunglasses"></i> 
+          <span class="navIcons">Matches</span>
+        </md-button>
       </md-list-item>
-      <hr>
+      
       <md-list-item> 
-        <md-button class="navBtn" ng-click="close()" ui-sref=".profile">Profile</md-button>
+        <md-button class="navBtn" ng-click="close()" ui-sref=".profile"> 
+          <i class="glyphicon glyphicon-user"></i> 
+          <span class="navIcons">Profile</span>
+        </md-button>
       </md-list-item>
-      <hr>
+
       <md-list-item>
-        <md-button class="navBtn" ng-click="close()" ui-sref=".editProfile">Edit</md-button>
+        <md-button class="navBtn" ng-click="close()" ui-sref=".editProfile"> 
+        <i class="glyphicon glyphicon-edit"></i>
+          <span class="navIcons">Edit</span>
+        </md-button>
       </md-list-item>
-      <hr>
       <md-list-item>
-        <md-button class="navBtn" ng-click="close()" ui-sref=".photos">Photos</md-button>
+        <md-button class="navBtn" ng-click="close()" ui-sref=".photos">
+        <i class="glyphicon glyphicon-camera"></i> 
+          <span class="navIcons">Photos</span>
+      </md-button>
       </md-list-item>
-      <hr>
     </md-list>
   </md-content>
 </md-sidenav>

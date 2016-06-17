@@ -5,6 +5,7 @@ angular.module('dating-site', [
     'ui.router',
     'ngFileUpload',
     'ngMaterial',
+    'ngMdIcons',
     'dating-site.controllers',
     'dating-site.services'
   ])
@@ -14,7 +15,7 @@ angular.module('dating-site', [
       $httpProvider.defaults.headers.common.access_token = localStorage.getItem("access_token");
     }
 
-    $mdThemingProvider.theme('default')
+    $mdThemingProvider.theme('purple')
             .primaryPalette('blue')
             .accentPalette('red');
 
