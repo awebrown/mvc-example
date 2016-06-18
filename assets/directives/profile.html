@@ -1,5 +1,5 @@
-<img ng-src="{{ user.defaultImage }}">
+<img ng-src="{{ user.defaultImage }}" height="200" width="200">
 <h3>{{ user.firstName + ' ' + user.lastName }} </h3>
-<h4>{{ user.DOB | date : MMMM.dd.y}}</h4>
+<h4>{{ user.DOB | date }}</h4>
 <p>{{ user.about }}</p>
 <button class="md-raised md-primary md-button md-ink-ripple" ng-click="editProfileView()">Edit Profile</button>

@@ -7,11 +7,15 @@
 		</md-toolbar>
 		<md-content>
 			<md-list flex>
-				<md-subheader class="md-no-sticky">3 line item (with hover)</md-subheader>
+				<md-subheader class="md-no-sticky">Bust these hoes full of cream!</md-subheader>
 				<md-list-item class="md-3-line" ng-repeat="match in matches" ng-click="null">
-					<img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="" />
+					<img ng-src="{{ match.defaultImage }}" height="50" width="50"
+						 style="margin-right: 25px;" />
 					<div class="md-list-item-text" layout="column">
-						<p>{{ match }}</p>
+						
+						<h4>{{ match.firstName + ' ' + match.lastName }}</n4>
+						<p>{{ match.DOB | date }}</p>
+						<p>{{ match.about }}</p>
 					</div>
 				</md-list-item>
 				<md-divider ></md-divider>

@@ -49,8 +49,6 @@ angular.module('dating-site.controllers')
 
       Match.getMatches()
         .then(function(data) {
-          console.log(data);
-          console.log(data.data);
           $scope.matches = data.data;
         });
 
